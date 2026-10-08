@@ -6,7 +6,7 @@
 - **Unit:** 4 - DNS Security
 - **Lab:** DNS Security Lab, Parts 0–2
 - **Environment:** Docker, Linux, Bash
-- **Tools:** dig, dnsmasq
+- **Tools:** dig, dnsmasq, curl, grep, tail, Docker
 - **Source:** https://github.com/codepath/opencyber-dns-lab
 
 ## Objective
@@ -97,6 +97,101 @@ host-record=login.northwind-bank.test,127.0.0.1
 The original DNS record was disabled, and a replacement
 record redirected the login domain to the local container.
 
+## Simulated Phishing and Credential Capture
+
+After modifying the DNS resolver configuration, I investigated the simulated banking login page hosted inside the Docker environment.
+
+### HTTP Investigation
+
+Used curl to retrieve the fictional banking login page:
+
+```bash
+curl http://login.northwind-bank.test:8080/
+```
+
+The command returned HTML content for the simulated Northwind Bank login page.
+
+I also accessed the page through the Docker port mapping:
+
+`http://localhost:8088`
+
+The page contained a login form with a User ID field, password field, and Sign In button.
+
+### Credential Capture Verification
+
+Submitted fictional test credentials through the lab's simulated login page.
+
+Inspected the credential-capture log using:
+
+```bash
+cat /opt/dns-lab/captured.log
+```
+
+**Observed result:**
+
+- Three simulated credential submissions were recorded.
+- The capture log included timestamps and source IP addresses.
+- The recorded source address was `172.17.0.1`.
+
+This demonstrated how a deceptive login page can collect submitted credentials.
+
+The browser preview used the Docker port mapping, while the earlier curl request separately confirmed that the modified DNS hostname reached the simulated web server.
+
+## DNS Log Investigation
+
+Investigated DNS resolver activity to identify evidence of the modified DNS response.
+
+### Commands Used
+
+```bash
+tail -n 30 /opt/dns-lab/dnsmasq-runtime.log
+```
+
+```bash
+grep 'login.northwind-bank.test' /opt/dns-lab/dnsmasq-runtime.log
+```
+
+```bash
+grep '127.0.0.1' /opt/dns-lab/dnsmasq-runtime.log
+```
+
+### Incident Timeline
+
+| Time (Oct 8) | Event | Finding |
+|---|---|---|
+| 19:35:04 | Original DNS response | 203.0.113.10 |
+| 19:36:14 | DNS service terminated | SIGTERM |
+| 19:36:39 | DNS service restarted | Modified configuration loaded |
+| 19:40:03 | Modified DNS response | 127.0.0.1 |
+| 19:44:35 | Additional DNS response | 127.0.0.1 |
+| 19:54–19:56 | Credential submissions | Three simulated captures |
+
+### Evidence
+
+**Original DNS response:**
+
+```text
+config login.northwind-bank.test is 203.0.113.10
+```
+
+**Modified DNS response:**
+
+```text
+config login.northwind-bank.test is 127.0.0.1
+```
+
+The resolver logs confirmed that the same hostname returned different IP addresses before and after the configuration change.
+
+### Security Analysis
+
+This investigation demonstrated how DNS manipulation can redirect network traffic toward an unintended destination.
+
+By comparing resolver logs with credential-capture records, I practiced log correlation and incident timeline reconstruction.
+
+I also learned to distinguish between a DNS query originating from `127.0.0.1` and a DNS response returning `127.0.0.1`.
+
+The unexpected DNS response was the relevant indicator of the simulated DNS hijack.
+
 ### DNS Security Findings
 
 | IP Address | Role |
@@ -156,9 +251,15 @@ This demonstrated how DNS configuration manipulation can redirect a domain to an
 
 ## Personal Reflection
 
-This lab helped me better understand the relationship between DNS resolution, network security, and user trust.
+This lab helped me understand how DNS vulnerabilities can be exploited to redirect users toward unintended websites.
 
-Using Docker and command-line tools gave me hands-on experience investigating DNS behavior and exploring how resolver configuration affects security.
+By modifying the DNS resolver configuration, I observed how a fictional banking domain could be redirected to a simulated phishing page.
+
+I also investigated credential-capture logs and DNS resolver activity to reconstruct the sequence of events.
+
+One of my biggest takeaways was learning how to distinguish between a DNS query's source IP address and the IP address returned by the resolver.
+
+This exercise strengthened my understanding of DNS security, phishing techniques, log analysis, and incident response.
 
 ## References
 
