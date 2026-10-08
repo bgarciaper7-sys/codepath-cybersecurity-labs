@@ -19,5 +19,46 @@ In this unit of CodePath CYB101, I studied how cybersecurity professionals ident
 - Security controls help reduce risk.
 
 ## Personal Lab Notes
-_To complete: Add specific exercises, observations, and lessons from my Week 1 activities._
+During Unit 1, I explored how cybersecurity
+professionals approach unfamiliar problems
+using critical thinking, research, and
+systematic investigation.
+
+Through CyberChef exercises and CTF challenges,
+I practiced identifying classical ciphers,
+decoding encoded messages, investigating
+image metadata, and analyzing file signatures.
+
+One important lesson was understanding that
+encoding, encryption, and hashing serve
+different purposes.
+
+The CTF challenges also helped me develop
+a structured approach to problem-solving:
+identify clues, research unfamiliar concepts,
+test possible solutions, and document findings.
   
+## Hands-On Labs and Projects
+
+### CyberChef Introduction Lab
+Explored CyberChef through six exercises involving
+classical ciphers, file signatures, hidden messages,
+and password hashes.
+
+[View CyberChef Lab](cyberchef-lab.md)
+
+### CyberChef Capture the Flag Project
+Documented 11 cybersecurity challenges involving
+cryptography, reconnaissance, and security concepts.
+
+[View CTF Project](cyberchef-ctf-project.md)
+
+## Technical Skills
+- CyberChef
+- ROT13 and Caesar ciphers
+- Vigenere and Rail Fence ciphers
+- Base64 decoding
+- File signature analysis
+- Image metadata investigation
+- Password hash analysis
+- Capture the Flag problem-solving
