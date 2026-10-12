@@ -10,16 +10,72 @@ This repository contains hands-on cybersecurity labs, technical investigations, 
 | 1 | Security Mindset | [View Week 1](week-01-security-mindset/) |
 | 2 | Encryption & SSH Security | [View Week 2](week-02-encryption/) |
 | 3 | Authentication & Password Security | [View Week 3](week-03-authentication/) |
-| 4 | DNS & Network Security | [Week 4 in Progress](week-04-dns-security/) |
+| 4 | DNS & Network Security | [View Week 4](week-04-dns-security/) |
+
+## Project Highlights
+
+### Week 1: Security Mindset & CyberChef
+
+Completed introductory cybersecurity exercises involving security analysis, CyberChef, and capture-the-flag (CTF) challenges.
+
+- Practiced identifying security threats, vulnerabilities, and risks.
+- Used CyberChef to investigate encoded information.
+- Completed 11 CTF challenges involving trivia, reconnaissance, and cryptography.
+- Developed foundational problem-solving and cybersecurity investigation skills.
+
+**Project Documentation:**
+- [CyberChef Lab](week-01-security-mindset/cyberchef-lab.md)
+- [CyberChef CTF Project](week-01-security-mindset/cyberchef-ctf-project.md)
+
+### Week 2: Encryption & SSH Security
+
+Completed a Linux-based security investigation involving SSH authentication logs and suspicious system activity.
+
+- Investigated SSH authentication events and system logs.
+- Identified suspicious root login activity from `203.0.113.66`.
+- Investigated the malicious `update-agent.sh` script.
+- Identified a suspicious external communication destination.
+- Practiced documenting security findings and incident-response recommendations.
+
+**Lab Documentation:**
+- [Terminal & SSH Security Lab](week-02-encryption/terminal-ssh-lab.md)
+
+### Week 3: Authentication & Password Security
+
+Completed password security exercises using Docker and John the Ripper.
+
+- Investigated password hashing and password-cracking techniques.
+- Practiced dictionary attacks, rule-based attacks, and mask attacks.
+- Analyzed a simulated dataset containing 1,000 password hashes.
+- Successfully recovered 262 passwords (26.2%) in the simulated password-cracking challenge.
+- Explored how password complexity and predictable patterns affect password security.
+
+**Project Documentation:**
+- [Password Cracking Lab](week-03-authentication/password-cracking-lab.md)
+- [Password Crackathon Project](week-03-authentication/password-crackathon-project.md)
+
+### Week 4: DNS & Network Security
+
+Completed the DNS Security Lab and Project 4: The Hunt.
+
+- Investigated DNS resolver manipulation and simulated phishing.
+- Analyzed DNS logs to identify suspicious workstation activity.
+- Verified a command-and-control domain using `dig` and `check-c2`.
+- Recovered Base32-encoded information using CyberChef.
+- Completed an optional breach-size analysis and recommended DNS anomaly monitoring.
+
+**Project Documentation:**
+- [DNS Security Lab](week-04-dns-security/dns-security-lab.md)
+- [DNS Security Project: The Hunt](week-04-dns-security/dns-security-project.md)
 
 ## Technical Skills
 
-- **Security Tools:** CyberChef, John the Ripper
+- **Security Tools:** CyberChef, John the Ripper, dnsmasq, dig
 - **Development Tools:** Docker, Git, GitHub, VS Code
-- **Command Line:** Linux Bash, PowerShell, SSH
-- **Security Concepts:** Cryptography, authentication, password hashing, DNS security, incident investigation
+- **Command Line:** Linux Bash, PowerShell, SSH, grep, awk, cut, curl
+- **Security Concepts:** Cryptography, authentication, password hashing, DNS security, DNS poisoning, DNS exfiltration, command-and-control (C2) detection, incident investigation
+- **Security Analysis:** Log analysis, threat detection, incident timeline reconstruction, Base32 decoding, defensive recommendations
 - **Documentation:** Technical reporting, security findings, defensive recommendations
-
 
 ## Project Performance
 
@@ -33,11 +89,15 @@ This repository documents my hands-on coursework and cybersecurity projects comp
 | **Total** | **Completed Projects** | **63/52** | **121.2%** |
 
 **Highlights:**
-- Earned full credit or higher on all three completed projects.
+
+- Earned full credit or higher on the first three graded projects.
 - Earned 11 points above the combined maximum through additional credit.
+- Completed Week 4's DNS Security Lab and Project 4: The Hunt, including the optional stretch challenge.
+- Identified and verified a simulated command-and-control domain through DNS log analysis.
+- Recovered Base32-encoded information using CyberChef.
 - Applied cybersecurity concepts through hands-on investigations, security tools, and technical documentation.
 
-*Project performance reflects points earned on these three assignments, including extra credit, rather than an overall course grade.*
+*Project performance reflects points earned on the first three graded assignments, including extra credit, rather than an overall course grade. Week 4 grading is pending.*
   
 ## Learning Objectives
 
