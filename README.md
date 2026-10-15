@@ -11,6 +11,7 @@ This repository contains hands-on cybersecurity labs, technical investigations, 
 | 2 | Encryption & SSH Security | [View Week 2](week-02-encryption/) |
 | 3 | Authentication & Password Security | [View Week 3](week-03-authentication/) |
 | 4 | DNS & Network Security | [View Week 4](week-04-dns-security/) |
+| 5 | Malware Detection | [View Week 5](week-05-malware-detection/) |
 
 ## Project Highlights
 
@@ -64,17 +65,32 @@ Completed the DNS Security Lab and Project 4: The Hunt.
 - Recovered Base32-encoded information using CyberChef.
 - Completed an optional breach-size analysis and recommended DNS anomaly monitoring.
 
+
 **Project Documentation:**
 - [DNS Security Lab](week-04-dns-security/dns-security-lab.md)
 - [DNS Security Project: The Hunt](week-04-dns-security/dns-security-project.md)
 
+### Week 5: Malware Detection
+
+Completed the Malware Detection Lab using an Azure Ubuntu VM, Linux command-line tools, and VirusTotal.
+
+- Investigated four EICAR antivirus test files.
+- Calculated and compared SHA-1 file hashes.
+- Analyzed YARA signature matches and VirusTotal reports.
+- Compared antivirus detection results for original and compressed files.
+- Observed 62 malicious detections for the original EICAR file, compared with 11 for the ZIP archive and 16 for the nested ZIP.
+- Learned why antivirus detection counts require context and why fewer detections do not necessarily indicate a safe file.
+
+**Lab Documentation:**
+- [Malware Detection Lab](week-05-malware-detection/malware-detection-lab.md)
+
 ## Technical Skills
 
-- **Security Tools:** CyberChef, John the Ripper, dnsmasq, dig
+- **Security Tools:** CyberChef, John the Ripper, dnsmasq, dig, VirusTotal CLI, YARA signature analysis
 - **Development Tools:** Docker, Git, GitHub, VS Code
-- **Command Line:** Linux Bash, PowerShell, SSH, grep, awk, cut, curl
+- **Command Line:** Linux Bash, PowerShell, SSH, grep, awk, cut, curl, wget, ls, sha1sum
 - **Security Concepts:** Cryptography, authentication, password hashing, DNS security, DNS poisoning, DNS exfiltration, command-and-control (C2) detection, incident investigation
-- **Security Analysis:** Log analysis, threat detection, incident timeline reconstruction, Base32 decoding, defensive recommendations
+- **Security Analysis:** Log analysis, threat detection, incident timeline reconstruction, Base32 decoding, file hashing, malware signature analysis, antivirus detection comparison
 - **Documentation:** Technical reporting, security findings, defensive recommendations
 
 ## Project Performance
@@ -86,19 +102,22 @@ This repository documents my hands-on coursework and cybersecurity projects comp
 | 1 | Security Mindset | 20/12 | 166.7% |
 | 2 | Encryption | 23/20 | 115% |
 | 3 | Authentication and Password Security | 20/20 | 100% |
-| **Total** | **Completed Projects** | **63/52** | **121.2%** |
+| 4 | DNS and Network Security | 23/20 | 115% |
+| **Total** | **Completed Graded Projects** | **86/72** | **119.4%** |
+
 
 **Highlights:**
 
-- Earned full credit or higher on the first three graded projects.
-- Earned 11 points above the combined maximum through additional credit.
+- Earned full credit or higher on all four graded projects.
+- Earned 14 points above the combined maximum through additional credit.
 - Completed Week 4's DNS Security Lab and Project 4: The Hunt, including the optional stretch challenge.
+- Completed Week 5's Malware Detection Lab, analyzing EICAR test files, SHA-1 hashes, YARA signatures, and VirusTotal detection results.
 - Identified and verified a simulated command-and-control domain through DNS log analysis.
 - Recovered Base32-encoded information using CyberChef.
 - Applied cybersecurity concepts through hands-on investigations, security tools, and technical documentation.
 
-*Project performance reflects points earned on the first three graded assignments, including extra credit, rather than an overall course grade. Week 4 grading is pending.*
-  
+*Project performance reflects points earned on the first four graded assignments, including extra credit, rather than an overall course grade. Week 5's project grade is not yet included.*
+
 ## Learning Objectives
 
 Through this repository, I aim to:
