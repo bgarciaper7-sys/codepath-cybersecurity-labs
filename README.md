@@ -2,7 +2,7 @@
 
 Hands-on cybersecurity labs, technical investigations, and security projects completed through **CodePath CYB101: Intro to Cybersecurity**.
 
-This repository documents my practical experience with Linux, network security, authentication, cryptography, threat detection, malware analysis, and defensive security.
+This repository documents my practical experience with Linux, network security, authentication, cryptography, threat detection, malware analysis, steganography, and defensive security.
 
 ## Labs & Projects
 
@@ -13,10 +13,11 @@ This repository documents my practical experience with Linux, network security, 
 | 3 | Authentication & Password Security | [View Week 3](week-03-authentication/) |
 | 4 | DNS & Network Security | [View Week 4](week-04-dns-security/) |
 | 5 | Malware Detection & Analysis | [View Week 5](week-05-malware-detection/) |
+| 6 | Steganography & Digital Forensics | [View Week 6](week-06-steganography/) |
 
 ## Project Highlights
 
-### Week 1 — Security Mindset & CyberChef
+### Week 1: Security Mindset & CyberChef
 
 Completed introductory cybersecurity exercises involving security analysis, CyberChef, and capture-the-flag (CTF) challenges.
 
@@ -29,7 +30,7 @@ Completed introductory cybersecurity exercises involving security analysis, Cybe
 - [CyberChef Lab](week-01-security-mindset/cyberchef-lab.md)
 - [CyberChef CTF Project](week-01-security-mindset/cyberchef-ctf-project.md)
 
-### Week 2 — Encryption & SSH Security
+### Week 2: Encryption & SSH Security
 
 Completed a Linux-based security investigation involving SSH authentication logs and suspicious system activity.
 
@@ -42,7 +43,7 @@ Completed a Linux-based security investigation involving SSH authentication logs
 **Documentation**
 - [Terminal & SSH Security Lab](week-02-encryption/terminal-ssh-lab.md)
 
-### Week 3 — Authentication & Password Security
+### Week 3: Authentication & Password Security
 
 Completed password security exercises using Docker and John the Ripper.
 
@@ -56,7 +57,7 @@ Completed password security exercises using Docker and John the Ripper.
 - [Password Cracking Lab](week-03-authentication/password-cracking-lab.md)
 - [Password Crackathon Project](week-03-authentication/password-crackathon-project.md)
 
-### Week 4 — DNS & Network Security
+### Week 4: DNS & Network Security
 
 Completed the DNS Security Lab and Project 4: The Hunt.
 
@@ -71,7 +72,7 @@ Completed the DNS Security Lab and Project 4: The Hunt.
 - [DNS Security Lab](week-04-dns-security/dns-security-lab.md)
 - [DNS Security Project: The Hunt](week-04-dns-security/dns-security-project.md)
 
-### Week 5 — Malware Detection & Analysis
+### Week 5: Malware Detection & Analysis
 
 Completed a malware detection lab and an authorized security-testing project using an Azure Ubuntu virtual machine, Linux command-line tools, MSFVenom, and VirusTotal.
 
@@ -103,17 +104,50 @@ Completed a malware detection lab and an authorized security-testing project usi
 - [Detailed DIY Malware Walkthrough](week-05-malware-detection/projects/diy-malware/diy-malware.md)
 - [Project Reflection](week-05-malware-detection/projects/diy-malware/reflection.md)
 
+### Week 6: Steganography & Digital Forensics
+
+Completed a hands-on steganography lab and graded investigation involving JPEG file analysis, metadata examination, hidden-file extraction, and concealed message embedding.
+
+**Steganography Lab: Beneath the Images**
+
+- Investigated JPEG file structures and hexadecimal representations using CyberChef.
+- Examined image metadata and file headers to identify concealed information.
+- Modified JPEG height information to reveal previously hidden image content.
+- Extracted an embedded ZIP archive from a JPEG and reconstructed a concealed message.
+- Explored the differences between steganography, metadata, and file-format manipulation.
+- Practiced evidence-based analysis to distinguish hidden information from confirmed malicious activity.
+
+**The Artist's Message: Graded Project**
+
+- Investigated 26 JPEG images using Linux and ExifTool.
+- Filtered image metadata to identify relevant files and investigative clues.
+- Used Steghide to identify and extract a password-protected hidden file.
+- Interpreted concealed instructions and embedded a reply into a designated JPEG.
+- Successfully verified the encoded response using the lab's built-in checker.
+- Troubleshot Docker image compatibility and Windows/Linux line-ending issues.
+- Documented the investigation without publishing graded challenge passwords or solutions.
+
+**Final verification:** `CORRECT: Message encoded successfully. You win!`
+
+**Lab Documentation**
+- [Steganography Lab: Beneath the Images](week-06-steganography/labs/README.md)
+
+**Project Documentation**
+- [The Artist's Message: Steganography Investigation](week-06-steganography/projects/README.md)
+- [Week 6 Overview](week-06-steganography/README.md)
+
 ## Technical Skills
 
 | Category | Tools and Skills |
 |---|---|
-| Security Tools | CyberChef, John the Ripper, VirusTotal, MSFVenom, DNS investigation tools |
+| Security Tools | CyberChef, John the Ripper, VirusTotal, MSFVenom, ExifTool, Steghide, DNS investigation tools |
 | Operating Systems | Linux (Ubuntu), Windows |
 | Development Tools | Docker, Git, GitHub, VS Code, Remote SSH |
-| Command Line | Bash, PowerShell, `grep`, `awk`, `cut`, `dig`, `wget`, `ls`, `sha1sum`, `sha256sum` |
+| Command Line | Bash, PowerShell, `grep`, `awk`, `cut`, `dig`, `wget`, `ls`, `cat`, `echo`, `sha1sum`, `sha256sum` |
 | Network Security | DNS, DNS poisoning, DNS exfiltration, SSH security, command-and-control investigation |
 | Authentication & Cryptography | Password hashing, encryption concepts, authentication analysis, Base32 decoding |
 | Malware Analysis | File signatures, file hashing, antivirus detection, executable formats, encoding concepts |
+| Digital Forensics & Steganography | JPEG structure analysis, hexadecimal inspection, metadata filtering, hidden-file extraction, steganographic embedding |
 | Security Investigation | Log analysis, suspicious activity investigation, threat identification, technical reporting |
 | Professional Skills | Problem-solving, technical documentation, troubleshooting, evidence-based analysis |
 
@@ -129,17 +163,20 @@ The following scores reflect completed graded projects and earned extra credit.
 | 4 | DNS & Network Security | 23/20 | 115% |
 | **Total** | **First Four Graded Projects** | **86/72** | **119.4%** |
 
-*These figures reflect the first four graded projects, including extra credit, rather than an overall course grade. Week 5's project score is not yet included.*
+*These figures reflect the first four graded projects, including extra credit, rather than an overall course grade. Weeks 5 and 6 are not included because their final project scores have not been recorded here.*
 
 ## Key Accomplishments
 
 - Earned full credit or higher on the first four graded projects.
-- Completed hands-on investigations involving authentication, DNS security, file signatures, and antivirus analysis.
+- Completed hands-on investigations involving authentication, DNS security, malware detection, and steganography.
 - Investigated simulated command-and-control activity and suspicious authentication events.
 - Recovered 262 passwords from a simulated password-security dataset.
 - Completed the Week 5 Malware Detection Lab and DIY Malware Project.
+- Completed the Week 6 Steganography Lab and successfully verified The Artist's Message project.
+- Practiced digital forensic techniques using CyberChef, ExifTool, and Steghide.
+- Troubleshot Docker container compatibility and cross-platform execution issues.
 - Developed technical walkthroughs, reflections, and evidence-based documentation.
-- Maintained a GitHub portfolio using version control and organized weekly project folders.
+- Maintained an organized GitHub portfolio using version control and weekly project folders.
 
 ## Learning Objectives
 
@@ -156,7 +193,7 @@ Through this repository, I aim to:
 
 All security exercises were performed in authorized CodePath educational environments.
 
-The repository contains documentation, observations, and permitted screenshots. It does not distribute executable malware samples, raw payloads, or sensitive credentials.
+The repository contains documentation, observations, and permitted screenshots. It does not distribute executable malware samples, raw payloads, sensitive credentials, or graded challenge passwords and solutions.
 
 ---
 
