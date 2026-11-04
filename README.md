@@ -14,6 +14,7 @@ This repository documents my practical experience with Linux, network security, 
 | 4 | DNS & Network Security | [View Week 4](week-04-dns-security/) |
 | 5 | Malware Detection & Analysis | [View Week 5](week-05-malware-detection/) |
 | 6 | Steganography & Digital Forensics | [View Week 6](week-06-steganography/) |
+| 7 | Shodan Reconnaissance & Industrial Security | [View Week 7](week-07-shodan-reconnaissance/README.md) |
 
 ## Project Highlights
 
@@ -136,18 +137,54 @@ Completed a hands-on steganography lab and graded investigation involving JPEG f
 - [The Artist's Message: Steganography Investigation](week-06-steganography/projects/README.md)
 - [Week 6 Overview](week-06-steganography/README.md)
 
+### Week 7: Shodan Reconnaissance & Industrial Security
+
+Completed the CodePath Shodan reconnaissance lab, including both optional stretch challenges, to investigate publicly indexed internet-connected devices, network services, and industrial control systems.
+
+**Shodan Reconnaissance Lab**
+
+- Used Shodan to investigate Samsung Smart TVs, Linksys camera interfaces, and potential website defacement indicators.
+- Analyzed HTTP response headers, service banners, IP geolocation, and network ports.
+- Investigated CodePath's publicly indexed infrastructure and identified three matching OpenSSH services.
+- Examined OpenSSH version information, Ubuntu operating-system details, and cloud-hosting information.
+- Generated Shodan reports to analyze service distributions and distinguish indexed service results from unique hosts.
+- Practiced interpreting reconnaissance findings without assuming that publicly exposed services were vulnerable.
+
+**Stretch Challenge: Custom Search Queries**
+
+- Constructed a filtered Shodan query using `product:nginx country:US`.
+- Analyzed over 15 million matching service results.
+- Examined geographic distribution and common web-service ports, including 80 and 443.
+
+**Stretch Challenge: Industrial Control Systems**
+
+- Investigated SCADA and Modbus services using Shodan.
+- Identified port 502 as a common Modbus TCP service port.
+- Examined publicly indexed industrial equipment descriptions, including power-meter information.
+- Identified a honeypot result and learned why search matches do not necessarily represent production systems.
+- Evaluated potential cybersecurity risks affecting operational technology and critical infrastructure.
+
+**Key Skills:** OSINT, passive reconnaissance, Shodan search filters, service-banner analysis, OpenSSH, IoT security, SCADA, Modbus, and industrial cybersecurity.
+
+**Lab Documentation**
+
+- [Week 7: Shodan Reconnaissance Lab](week-07-shodan-reconnaissance/README.md)
+- [Week 7: Screenshots and Evidence](week-07-shodan-reconnaissance/README.md#screenshots--evidence)
+
 ## Technical Skills
 
 | Category | Tools and Skills |
 |---|---|
-| Security Tools | CyberChef, John the Ripper, VirusTotal, MSFVenom, ExifTool, Steghide, DNS investigation tools |
+| Security Tools | CyberChef, John the Ripper, VirusTotal, MSFVenom, ExifTool, Steghide, Shodan, DNS investigation tools |
 | Operating Systems | Linux (Ubuntu), Windows |
 | Development Tools | Docker, Git, GitHub, VS Code, Remote SSH |
 | Command Line | Bash, PowerShell, `grep`, `awk`, `cut`, `dig`, `wget`, `ls`, `cat`, `echo`, `sha1sum`, `sha256sum` |
-| Network Security | DNS, DNS poisoning, DNS exfiltration, SSH security, command-and-control investigation |
+| Network Security | DNS, DNS poisoning, DNS exfiltration, SSH security, command-and-control investigation, network ports and protocols |
 | Authentication & Cryptography | Password hashing, encryption concepts, authentication analysis, Base32 decoding |
 | Malware Analysis | File signatures, file hashing, antivirus detection, executable formats, encoding concepts |
 | Digital Forensics & Steganography | JPEG structure analysis, hexadecimal inspection, metadata filtering, hidden-file extraction, steganographic embedding |
+| Reconnaissance & OSINT | Shodan search queries, internet-facing asset discovery, search filters, service-banner analysis, IP geolocation, technology identification |
+| Industrial Cybersecurity | SCADA, Modbus TCP, operational technology (OT), industrial control systems (ICS), critical infrastructure security awareness |
 | Security Investigation | Log analysis, suspicious activity investigation, threat identification, technical reporting |
 | Professional Skills | Problem-solving, technical documentation, troubleshooting, evidence-based analysis |
 
@@ -177,6 +214,8 @@ The following scores reflect completed graded projects and earned extra credit.
 - Troubleshot Docker container compatibility and cross-platform execution issues.
 - Developed technical walkthroughs, reflections, and evidence-based documentation.
 - Maintained an organized GitHub portfolio using version control and weekly project folders.
+- Completed the Week 7 Shodan Reconnaissance Lab, including both optional stretch challenges involving custom search filters and industrial control systems.
+- Conducted passive reconnaissance of internet-facing services, analyzed OpenSSH and HTTP banners, and investigated SCADA and Modbus exposure using Shodan.
 
 ## Learning Objectives
 
@@ -197,4 +236,4 @@ The repository contains documentation, observations, and permitted screenshots. 
 
 ---
 
-*This portfolio is an ongoing record of my cybersecurity learning and hands-on experience through CodePath CYB101.*
+*This portfolio is an ongoing record of my cybersecurity learning and hands-on experience through CodePath CYB101.*git 
