@@ -14,7 +14,7 @@ This repository documents my practical experience with Linux, network security, 
 | 4 | DNS & Network Security | [View Week 4](week-04-dns-security/) |
 | 5 | Malware Detection & Analysis | [View Week 5](week-05-malware-detection/) |
 | 6 | Steganography & Digital Forensics | [View Week 6](week-06-steganography/) |
-| 7 | Shodan Reconnaissance & Industrial Security | [View Week 7](week-07-shodan-reconnaissance/README.md) |
+| 7 | Shodan Reconnaissance & Threat Analysis | [Lab & Project](week-07-shodan-reconnaissance/README.md) |
 
 ## Project Highlights
 
@@ -137,9 +137,9 @@ Completed a hands-on steganography lab and graded investigation involving JPEG f
 - [The Artist's Message: Steganography Investigation](week-06-steganography/projects/README.md)
 - [Week 6 Overview](week-06-steganography/README.md)
 
-### Week 7: Shodan Reconnaissance & Industrial Security
+### Week 7: Shodan Reconnaissance & Threat Analysis
 
-Completed the CodePath Shodan reconnaissance lab, including both optional stretch challenges, to investigate publicly indexed internet-connected devices, network services, and industrial control systems.
+Completed the CodePath CYB101 Week 7 lab and project, focusing on passive reconnaissance, threat intelligence, vulnerability research, industrial cybersecurity, and Python automation.
 
 **Shodan Reconnaissance Lab**
 
@@ -150,13 +150,13 @@ Completed the CodePath Shodan reconnaissance lab, including both optional stretc
 - Generated Shodan reports to analyze service distributions and distinguish indexed service results from unique hosts.
 - Practiced interpreting reconnaissance findings without assuming that publicly exposed services were vulnerable.
 
-**Stretch Challenge: Custom Search Queries**
+**Lab Stretch Challenge: Custom Search Queries**
 
 - Constructed a filtered Shodan query using `product:nginx country:US`.
 - Analyzed over 15 million matching service results.
 - Examined geographic distribution and common web-service ports, including 80 and 443.
 
-**Stretch Challenge: Industrial Control Systems**
+**Lab Stretch Challenge: Industrial Control Systems**
 
 - Investigated SCADA and Modbus services using Shodan.
 - Identified port 502 as a common Modbus TCP service port.
@@ -164,12 +164,34 @@ Completed the CodePath Shodan reconnaissance lab, including both optional stretc
 - Identified a honeypot result and learned why search matches do not necessarily represent production systems.
 - Evaluated potential cybersecurity risks affecting operational technology and critical infrastructure.
 
-**Key Skills:** OSINT, passive reconnaissance, Shodan search filters, service-banner analysis, OpenSSH, IoT security, SCADA, Modbus, and industrial cybersecurity.
+**Threat Analysis Project**
 
-**Lab Documentation**
+- Conducted passive reconnaissance on five publicly accessible hosts using the Shodan InternetDB API.
+- Investigated hostnames, IP addresses, exposed ports, software identifiers, and associated CVEs.
+- Researched three vulnerabilities using the National Vulnerability Database: CVE-2014-4078, CVE-2022-28614, and CVE-2021-44790.
+- Compared CVSS severity scores and analyzed potential impacts on confidentiality, integrity, and availability.
+- Distinguished publicly indexed vulnerability information from confirmed vulnerabilities.
 
-- [Week 7: Shodan Reconnaissance Lab](week-07-shodan-reconnaissance/README.md)
-- [Week 7: Screenshots and Evidence](week-07-shodan-reconnaissance/README.md#screenshots--evidence)
+**Project Stretch Challenge: Python Shodan Automation**
+
+- Developed `shodan_lookup.py`, a Python script that retrieves host information from Shodan InternetDB.
+- Implemented command-line arguments to investigate different IP addresses.
+- Parsed JSON responses to display hostnames, ports, and associated CVE counts.
+- Added HTTP error handling for unavailable records.
+- Debugged HTTP 403 errors, Python indentation issues, and Linux directory navigation.
+- Successfully tested the completed script on Ubuntu Linux and Windows PowerShell.
+- Completed the first optional project stretch challenge. The second optional challenge was not attempted.
+
+**Key Skills:** OSINT, passive reconnaissance, Shodan, CVE research, CVSS interpretation, threat intelligence, Python, JSON, REST APIs, HTTP requests, exception handling, Linux, PowerShell, OpenSSH, IoT security, SCADA, Modbus, and industrial cybersecurity.
+
+**Week 7 Documentation**
+
+- [Week 7 Overview](week-07-shodan-reconnaissance/README.md)
+- [Shodan Reconnaissance Lab](week-07-shodan-reconnaissance/lab/README.md)
+- [Lab Screenshots and Evidence](week-07-shodan-reconnaissance/lab/README.md#screenshots--evidence)
+- [Threat Analysis Project](week-07-shodan-reconnaissance/project/README.md)
+- [Python Shodan Automation Script](week-07-shodan-reconnaissance/project/shodan_lookup.py)
+- [Project Reflection](week-07-shodan-reconnaissance/project/reflection.md)
 
 ## Technical Skills
 
@@ -216,6 +238,8 @@ The following scores reflect completed graded projects and earned extra credit.
 - Maintained an organized GitHub portfolio using version control and weekly project folders.
 - Completed the Week 7 Shodan Reconnaissance Lab, including both optional stretch challenges involving custom search filters and industrial control systems.
 - Conducted passive reconnaissance of internet-facing services, analyzed OpenSSH and HTTP banners, and investigated SCADA and Modbus exposure using Shodan.
+- Developed and tested a Python automation script using the Shodan InternetDB API to retrieve hostnames, open ports, and associated CVE counts, incorporating JSON parsing, command-line arguments, and HTTP error handling.
+- Conducted threat analysis across five publicly accessible hosts and researched three CVEs using the National Vulnerability Database to assess severity and potential security impact.
 
 ## Learning Objectives
 

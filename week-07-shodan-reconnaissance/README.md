@@ -1,141 +1,30 @@
-# Week 7: Shodan Reconnaissance | CodePath CYB101
+# Week 7: Shodan Reconnaissance & Threat Analysis
 
-## Project Overview
+CodePath Cybersecurity 101 (CYB101)
 
-This lab introduced Shodan, a search engine that indexes publicly accessible internet-connected devices and services. I used Shodan to conduct passive reconnaissance, analyze service banners, identify exposed network ports, and investigate the security implications of publicly discoverable infrastructure.
+This week focused on open-source intelligence (OSINT), passive reconnaissance, vulnerability research, and Python automation.
 
-I also completed two stretch challenges involving custom search filters and industrial control systems.
+## Lab: Shodan Reconnaissance
 
-## Tools and Technologies
+Explored publicly indexed internet-connected systems using Shodan, examined service information and exposed ports, and investigated security considerations involving IoT and industrial control systems.
 
-- Shodan Search Engine
-- Shodan Search Filters and Reports
-- HTTP and SSH Service Banners
-- OpenSSH
-- nginx
-- SCADA and Modbus
-- IoT and Industrial Control Systems
+**Skills:** OSINT, Shodan search filters, service-banner analysis, network reconnaissance, IoT security, and SCADA/ICS awareness.
 
-## Investigations and Findings
+[View Week 7 Lab](lab/README.md)
 
-### 1. Samsung Smart TV
+## Project: Threat Analysis
 
-**Search query:** `Samsung Smart TV`
+Investigated five hosts using Shodan InternetDB, researched three CVEs using the National Vulnerability Database, and developed a Python script to automate host-information lookups.
 
-- Identified 2,688 matching service results.
-- South Korea had the highest number of results, with 1,523.
-- Port 8001 appeared in 2,611 results.
-- Examined HTTP response headers and service information.
+**Skills:** Threat intelligence, CVE research, CVSS interpretation, Python, JSON, HTTP requests, Linux, and exception handling.
 
-**Key takeaway:** Internet-connected devices can expose identifying information through publicly indexed network services.
+[View Week 7 Project](project/README.md)
 
-### 2. Potential Website Defacement
+## Key Takeaways
 
-**Search query:** `hacked by`
+- Interpreted publicly available security information without assuming that exposed services were necessarily vulnerable.
+- Researched vulnerabilities and evaluated their potential impact on confidentiality, integrity, and availability.
+- Developed and tested a Python automation script on Ubuntu Linux and Windows.
+- Practiced troubleshooting HTTP errors, Python indentation, and Linux directory navigation.
 
-- Identified 49 matching results.
-- Examined an HTTP 401 Unauthorized response containing a message claiming the service had been hacked.
-- Learned to distinguish suspicious indicators from confirmed security incidents.
-
-**Key takeaway:** Service banners can contain indicators of possible compromise, but additional evidence is necessary to verify an incident.
-
-### 3. Linksys Video Cameras
-
-**Search query:** `title:"Linksys Compact Wireless"`
-
-- Identified 20 matching results.
-- Observed publicly indexed Linksys camera web interfaces.
-- Examined HTTP response codes and advertised Boa web-server information.
-
-**Key takeaway:** Publicly discoverable camera interfaces can increase security exposure, but their presence does not prove unauthorized access is possible.
-
-### 4. CodePath Infrastructure Reconnaissance
-
-**Search queries:**
-- `codepath.org`
-- `hostname:codepath.org product:OpenSSH`
-
-**Findings:**
-- 14 matching web-service results.
-- Three matching OpenSSH services.
-- OpenSSH services advertised version 7.6p1 on Ubuntu.
-- The SSH services were associated with Linode hosting in Richardson, Texas.
-- The broader web-service report identified nginx and ports 80, 443, and 8080.
-
-**Key takeaway:** Shodan reports help analysts understand publicly visible services, geographic distribution, software versions, and network exposure. Service-result counts do not necessarily equal unique physical hosts.
-
-## Stretch Challenge 1: Custom Search Filters
-
-**Search query:** `product:nginx country:US`
-
-- Identified 15,167,308 matching results.
-- Los Angeles had the highest count among the displayed cities.
-- Ports 80 and 443 were the most common.
-
-This challenge strengthened my understanding of combining search filters to investigate specific technologies and geographic regions.
-
-## Stretch Challenge 2: Industrial Control Systems
-
-### SCADA Investigation
-
-**Search query:** `SCADA`
-
-- Identified 2,885 matching results.
-- China and the United States had the highest counts among the displayed countries.
-- Observed a result labeled as a honeypot.
-
-### Modbus Investigation
-
-**Search query:** `Modbus`
-
-- Identified 1,203 matching results.
-- Port 502 appeared in 904 results.
-- Observed service information identifying industrial equipment, including a power meter.
-
-**Security implications:** Industrial control systems support physical processes and critical infrastructure. Unauthorized access could potentially disrupt operations or manipulate equipment. Strong authentication, network segmentation, access controls, and continuous monitoring are important protective measures.
-
-## Skills Developed
-
-- Passive reconnaissance and OSINT
-- Shodan query construction
-- Network port and protocol identification
-- HTTP and SSH banner analysis
-- Internet-facing asset discovery
-- IoT security awareness
-- Industrial cybersecurity fundamentals
-- Security findings documentation
-
-## Reflection
-
-This lab helped me understand how much information about internet-connected systems can be discovered without directly interacting with those systems.
-
-I practiced analyzing network ports, service banners, software versions, and geographic information. I also learned that publicly indexed services are not necessarily vulnerable and that reconnaissance findings must be interpreted carefully.
-
-The industrial control systems stretch challenge was particularly interesting because it demonstrated how cybersecurity risks can extend beyond information systems to physical infrastructure and operational technology.
-
-All investigations were limited to publicly indexed Shodan information. No authentication attempts, exploitation, or direct interaction with third-party devices were performed.
-
-## Screenshots & Evidence
-
-The following screenshots document my Shodan reconnaissance investigations and findings.
-
-### Required Lab Investigations
-
-| Investigation | Evidence |
-|---|---|
-| Samsung Smart TV | [View Screenshot](screenshots/01-samsung-smart-tv.png) |
-| Potential Website Defacement | [View Screenshot](screenshots/02-hacked-websites.png) |
-| Linksys Video Cameras | [View Screenshot](screenshots/03-linksys-cameras.png) |
-| CodePath OpenSSH Discovery | [View Screenshot](screenshots/04-codepath-openssh.png) |
-| CodePath OpenSSH Report | [View Screenshot](screenshots/05-codepath-openssh-report.png) |
-| CodePath Infrastructure Report | [View Screenshot](screenshots/06-codepath-full-report.png) |
-
-### Stretch Challenges
-
-| Investigation | Evidence |
-|---|---|
-| Custom nginx Search Query | [View Screenshot](screenshots/07-custom-nginx-query.png) |
-| SCADA Reconnaissance | [View Screenshot](screenshots/08-scada-search.png) |
-| Modbus Reconnaissance | [View Screenshot](screenshots/09-modbus-search.png) |
-
-**Note:** These screenshots document publicly indexed Shodan search results collected for educational purposes. The results do not establish that any identified system is vulnerable or compromised.
+All investigations used publicly available information and passive reconnaissance techniques.
